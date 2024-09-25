@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #07040B;
+    font-size: 14px; /*estilo padrão para dispositivos menores*/
+    scrollbar-width: none;
+}
+
+.frame-1, .frame-2{
+    display: block; /* Remove o espaço em branco abaixo da imagem */
+    width: 100vw; /* Largura da imagem será 100% da largura da tela */
+    height: auto; /* Altura ajusta proporcionalmente à largura */
+    max-height: 100vh; /* Altura máxima da imagem será 100% da altura da tela */
+    object-fit: cover; /* Faz com que a imagem cubra a área sem distorção */
+    
+}
+
+.frame-2{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    animation: growshrink 2s infinite;
+    
+}
+
+@keyframes growshrink{
+    0%, 100%{
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+    
+}
+
+.quadro{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.imagen-container{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.text {
+    color: white;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.button{
+    color: white;
+    padding: 10px 20px;
+    background-color: rgb(3, 173, 88);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    animation: growshrink 2s infinite;
+}
+
+.button:hover{
+    color: #07040B;
+    font-weight: bold;
+    background-color: white;
+}
